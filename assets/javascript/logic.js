@@ -48,7 +48,8 @@ function generateRandomLetter(){
 function checkUserGuess(userInput){
     if(userInput === gameSelectedLetter){
         winCounter++;
-        console.log(winCounter);
+        console.log(`Wins: ${winCounter}`);
+        startGame();
     }else{
         wrongGuess(userInput);
     }
