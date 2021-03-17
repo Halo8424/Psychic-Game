@@ -49,6 +49,7 @@ function checkUserGuess(userInput){
     if(userInput === gameSelectedLetter){
         winCounter++;
         console.log(`Wins: ${winCounter}`);
+        $("#winCounter").text(winCounter);
         startGame();
     }else{
         wrongGuess(userInput);
@@ -60,6 +61,7 @@ function wrongGuess(userInput){
     wrongUserGuessesArray.push(userInput);
     loseCounter++;
     console.log(`losses: ${loseCounter}`);
+    $("#lossCounter").text(loseCounter);
     startGame();
 }
 
