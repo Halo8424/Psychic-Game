@@ -1,5 +1,16 @@
 .jumbotron{
-  margin-top: .25rem;
+  margin-top: 1.25rem;
+  text-align: center;
+}
+
+.wins_losses_container{
+  display: flex;
+  justify-content: space-around;
+  padding: 2.25rem;
+  margin: .25rem;
+}
+
+.guess_container{
   text-align: center;
 }
 
