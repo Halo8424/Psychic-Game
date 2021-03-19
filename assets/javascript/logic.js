@@ -75,7 +75,7 @@ function checkRemainingGuesses() {
     $("#lossCounter").text(loseCounter);
     resetGuessCounter();
     resetWrongUserGuessesArray()
-    startGame();
+    startGame(); 
   }
 }
 function resetGuessCounter() {
