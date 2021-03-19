@@ -52,6 +52,7 @@ function checkUserGuess(userInput) {
     console.log(`Wins: ${winCounter}`);
     $("#winCounter").text(winCounter);
     resetGuessCounter()
+    resetWrongUserGuessesArray()
     startGame();
   } else {
     wrongGuess(userInput);
@@ -73,14 +74,17 @@ function checkRemainingGuesses() {
     loseCounter++;
     $("#lossCounter").text(loseCounter);
     resetGuessCounter();
+    resetWrongUserGuessesArray()
     startGame();
   }
 }
 function resetGuessCounter() {
   remainingUserGuesses = 10;
-  $("#already_guessed_container").empty();
-  wrongUserGuessesArray = [];
 }
+function resetWrongUserGuessesArray(){
+    wrongUserGuessesArray = [];
+    $("#already_guessed_container").empty();
+};
 
 startGame();
 //  Function for capturing key clicks.
