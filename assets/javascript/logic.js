@@ -51,6 +51,7 @@ function checkUserGuess(userInput) {
     winCounter++;
     console.log(`Wins: ${winCounter}`);
     $("#winCounter").text(winCounter);
+    resetGuessCounter()
     startGame();
   } else {
     wrongGuess(userInput);
@@ -61,6 +62,7 @@ function wrongGuess(userInput) {
   remainingUserGuesses--;
   $("#guessesLeftCounter").text(remainingUserGuesses);
   wrongUserGuessesArray.push(userInput);
+  $("#already_guessed_container").text(wrongUserGuessesArray)
   checkRemainingGuesses();
 }
 
@@ -76,6 +78,8 @@ function checkRemainingGuesses() {
 }
 function resetGuessCounter() {
   remainingUserGuesses = 10;
+  $("#already_guessed_container").empty();
+  wrongUserGuessesArray = [];
 }
 
 startGame();
